@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo">
+    </div>
+    <div class="cart-account">
+        <div class="cart" onclick="openCart()">
+            <img src="assets/images/cart-icon.png" alt="Cart">
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+        <div class="account">
+            <img src="assets/images/account-icon.png" alt="Account">
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <img src="assets/images/hero.jpg" alt="Hero Image">
+    <!-- <button class="cta-button">Shop Now</button> -->
+</section>
+
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid" id="product-grid"></div>
+</section>
+
+<section class="blog">
+    <h2>Beauty Tips & Reviews</h2>
+    <div class="blog-posts" id="blog-posts"></div>
+</section>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <button onclick="openCheckoutModal()">Proceed to Checkout</button>
+            <button class="close-cart" onclick="closeCart()">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Blog Modal -->
+<div id="blog-modal" class="blog-modal">
+    <div class="blog-modal-content">
+        <h2 id="blog-modal-title"></h2>
+        <img id="blog-modal-image" src="" alt="Blog Image">
+        <p id="blog-modal-text"></p>
+        <button class="close-blog-modal" onclick="closeBlogModal()">Close</button>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal" class="checkout-modal">
+    <div class="checkout-content">
+        <h2>Checkout</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="address" placeholder="Your Address">
+        <button onclick="confirmOrder()">Confirm Order</button>
+        <button class="close-checkout-modal" onclick="closeCheckoutModal()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
